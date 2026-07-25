@@ -5,7 +5,7 @@ class Solution:
             days,added_sum=1,0
             for i in range(len(weights)):
                 added_sum+=weights[i]
-                if added_sum==0 and i != len(weights)-1:
+                if added_sum==mid and i != len(weights)-1:
                     days+=1
                     added_sum=0
                 elif added_sum>mid:
