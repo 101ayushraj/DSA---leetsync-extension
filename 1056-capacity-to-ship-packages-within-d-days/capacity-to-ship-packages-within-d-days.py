@@ -11,10 +11,8 @@ class Solution:
                 elif added_sum>mid:
                     days+=1
                     added_sum=weights[i]
-                
 
             return days<=max_days
-        ans=0
         while right>=left:
             mid=left+(right-left)//2
             if solve(mid):
