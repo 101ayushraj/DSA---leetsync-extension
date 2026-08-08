@@ -13,7 +13,10 @@ class Solution:
             if node.val==val:
                 return node
             
-            return solve(node.left) or solve(node.right)
+            if val<node.val:
+                return solve(node.left)
+            else:
+                return solve(node.right)
             
         
         return solve(root)
