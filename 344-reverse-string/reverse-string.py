@@ -3,10 +3,10 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        def solve(s,left):
-            if left >= len(s)-left:
-                return s
-            s[left],s[len(s)-1-left]=s[len(s)-1-left],s[left]
-            solve(s,left+1)
+        def solve(left,right):
+            if left >= right:
+                return 
+            s[left],s[right]=s[right],s[left]
+            solve(left+1,right-1)
         
-        return solve(s,0)
+        return solve(0,len(s)-1)
