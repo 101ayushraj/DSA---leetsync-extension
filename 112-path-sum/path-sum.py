@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetsum: int) -> bool:
-        curr_sum=0
         if not root:
             return False
         def solve(node,curr_sum):
@@ -21,5 +20,5 @@ class Solution:
 
             return solve(node.left,curr_sum) or solve(node.right,curr_sum)
         
-        return solve(root,curr_sum)
+        return solve(root,0)
                 
