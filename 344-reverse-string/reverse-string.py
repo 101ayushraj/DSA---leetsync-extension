@@ -5,7 +5,7 @@ class Solution:
         """
         def solve(left,right):
             if left >= right:
-                return 
+                return None 
             s[left],s[right]=s[right],s[left]
             solve(left+1,right-1)
         
