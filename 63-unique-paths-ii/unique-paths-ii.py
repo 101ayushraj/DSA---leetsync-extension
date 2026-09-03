@@ -5,8 +5,8 @@ class Solution:
         
         if obs[0][0]==1:
             return 0
-        if m==n==1:
-            return 1
+        # if m==n==1:
+        #     return 1
 
         dp=[[0] * n for _ in range(m)]
 
@@ -21,7 +21,7 @@ class Solution:
             else:
                 dp[j][0]=1
 
-        dp[0][0]=0
+        # dp[0][0]=0
 
         for i in range(1,m):
             for j in range(1,n):
