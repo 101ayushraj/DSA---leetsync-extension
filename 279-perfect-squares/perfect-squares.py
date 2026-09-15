@@ -4,7 +4,7 @@ class Solution:
             return 1
         def perfect(num):
             nums=[]
-            for i in range(1,num):
+            for i in range(1,(num//2) + 1):
                 if i ** 2 <= num:
                     nums.append(i**2)
                 else:
